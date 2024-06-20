@@ -106,7 +106,7 @@ def start_game():
     set_up_the_world(canvas)
 
     # Amount of bricks
-    bricks_amount = 1  # 10 rows of bricks
+    bricks_amount = 10 * BRICKS_ROW  # 10 rows of bricks
 
     # Create the bouncing ball
     ball = create_a_ball(canvas)
@@ -252,7 +252,6 @@ def create_a_ball(canvas):
 def bounce_ball(canvas, ball, change_x, change_y, ball_change):
     # Get ball coords
     ball_coords = canvas.coords(ball)
-    print(ball_coords)
     ball_x, ball_y = ball_coords[0], ball_coords[1]
 
     # Calculate coords
